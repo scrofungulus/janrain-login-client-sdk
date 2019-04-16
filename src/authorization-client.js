@@ -1,9 +1,11 @@
 const BaseClient = require('./base-client');
 
 class AuthorizationClient extends BaseClient {
-  constructor({ url }, options = {}) {
+  constructor(config, options = {}) {
+    const { url } = config;
     super(url, options);
     this.options = options;
+    this.config = config;
   }
 
   /**
