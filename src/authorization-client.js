@@ -66,8 +66,6 @@ class AuthorizationClient extends BaseClient {
 
     body.token = token ? token : this.options.accessToken;
 
-    console.log('updating profile');
-
     return this.post('/oauth/update_profile_native', body);
   }
 }
