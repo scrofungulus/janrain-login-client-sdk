@@ -16,7 +16,7 @@ class AuthorizationClient extends BaseClient {
    */
   register(emailAddress, password, attrs = {}) {
     const body = {
-      ...this.options.defaults,
+      ...this.config.defaults,
       ...attrs,
       emailAddress,
       displayName: emailAddress,
@@ -39,7 +39,7 @@ class AuthorizationClient extends BaseClient {
    */
   login(emailAddress, password) {
     const body = {
-      ...this.options.defaults,
+      ...this.config.defaults,
       signInEmailAddress: emailAddress,
       currentPassword: password,
     };
@@ -59,7 +59,7 @@ class AuthorizationClient extends BaseClient {
    * */
   updateProfile(attrs, token) {
     const body = {
-      ...this.options.defaults,
+      ...this.config.defaults,
       ...attrs,
       form: 'editProfileForm',
     };

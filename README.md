@@ -6,10 +6,6 @@ An SDK to interface with Janrain's Authorization API providing reasonable defaul
 ```
 const Janrain =  require('janrain-login-client-sdk');
 
-const config = {
-  url: 'https://YOUR_APP_NAME.janraincapture.com'
-};
-
 const defaults = {
   client_id: '1234567890',
   flow: 'standard',
@@ -18,8 +14,13 @@ const defaults = {
   redirect_uri: 'http://localhost:3000',
 }
 
-const options = {
+const config = {
+  url: 'https://YOUR_APP_NAME.janraincapture.com',
   defaults,
+};
+
+const options = {
+  timeout: 5000,
 };
 
 const client = new Janrain(config, options);
