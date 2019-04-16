@@ -1,4 +1,4 @@
-# Janrian Login Client SDK
+# Janrain Login Client SDK
 
 An SDK to interface with Janrain's Authorization API providing reasonable defaults.
 
