@@ -18,7 +18,11 @@ const defaults = {
   redirect_uri: 'http://localhost:3000',
 }
 
-const client = new Janrain(config, { defaults });
+const options = {
+  defaults,
+};
+
+const client = new Janrain(config, options);
 ```
 
 ## Usage
