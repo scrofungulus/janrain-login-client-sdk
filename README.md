@@ -58,7 +58,7 @@ Updates user profile associated with access token
 **Example**
 This code sample is used to work around Janrain rate limiting.
 ```
-const client = new Janrain(config, { defaults });
+const client = new Janrain(config, options);
 
 const register = (user) => {
   const { firstName, lastName, email, password, phone } = user;
