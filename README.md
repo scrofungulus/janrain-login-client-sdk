@@ -3,7 +3,7 @@
 An SDK to interface with Janrain's Authorization API providing reasonable defaults.
 
 ## Configuration
-```
+```javascript
 const Janrain =  require('janrain-login-client-sdk');
 
 const defaults = {
@@ -27,7 +27,7 @@ const client = new Janrain(config, options);
 ```
 
 ## Usage
-```
+```javascript
 async function register(firstName, lastName, email, password) {
   const attrs = {
     firstName,
@@ -44,20 +44,30 @@ The provided functions return Axios' default HTTP response. This allows for flex
 how you please. You can see an example below.
 
 ### Register
+
 Creates new user entity in Janrain
-`client.register(emailAddress, password, attrs = {})`
+```javascript
+client.register(emailAddress, password, attrs = {})
+```
 
 ### Login
+
 Get access token for existing entity
-`client.login(emailAddress, password)`
+```javascript
+client.login(emailAddress, password)
+```
 
 ### Update Profile
+
 Updates user profile associated with access token
-`client.updateProfile(attrs, token)`
+```javascript
+client.updateProfile(attrs, token)
+```
 
 **Example**
+
 This code sample is used to work around Janrain rate limiting.
-```
+```javscript
 const client = new Janrain(config, options);
 
 const register = (user) => {

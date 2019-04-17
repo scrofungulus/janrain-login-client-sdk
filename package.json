@@ -1,6 +1,6 @@
 {
   "name": "janrain-login-client-sdk",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A login client for Janrain currently only supporting Register Native",
   "main": "src/index.js",
   "scripts": {
