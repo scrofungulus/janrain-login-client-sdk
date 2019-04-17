@@ -67,7 +67,7 @@ client.updateProfile(attrs, token)
 **Example**
 
 This code sample is used to work around Janrain rate limiting.
-```javscript
+```javascript
 const client = new Janrain(config, options);
 
 const register = (user) => {
