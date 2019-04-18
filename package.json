@@ -1,6 +1,6 @@
 {
   "name": "janrain-login-client-sdk",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "A login client for Janrain currently only supporting Register Native",
   "main": "src/index.js",
   "scripts": {
@@ -14,5 +14,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/scrofungulus/janrain-login-client-sdk.git"
-  }
+  },
+  "keywords": [
+    "janrain",
+    "janrain client",
+    "janrain login",
+    "login", 
+    "janrain login client",
+    "janrain sdk",
+    "janrain library", 
+    "capture", 
+    "janrain capture"
+  ]
 }

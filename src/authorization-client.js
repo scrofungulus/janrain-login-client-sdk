@@ -37,11 +37,20 @@ class AuthorizationClient extends BaseClient {
   /**
    * Login a user in Janrain
    * @param {String} emailAddress - Email address to register a user for
-   * @param {String} password -Password password associated with the user's profile
+   * @param {String} password - Password associated with the user's profile
+   * @param {String} redirectUri - Optional redirect uri if not relying on default configuration of client
    */
-  login(emailAddress, password) {
+  login(emailAddress, password, redirectUri = "") {
+    const { redirect_uri: defaultRedirectUri } = this.config.defaults;
+    if (redirectUri === "" && !defaultRedirectUri) {
+      throw new Error("Must provide redirect_uri to client");
+    }
+
+    const redirect = redirectUri === "" ? defaultRedirectUri : redirectUri;
+
     const body = {
       ...this.config.defaults,
+      redirect_uri: redirect,
       signInEmailAddress: emailAddress,
       currentPassword: password,
     };

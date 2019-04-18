@@ -38,6 +38,35 @@ async function register(firstName, lastName, email, password) {
 }
 ```
 
+Note: Any specified attributes (`attrs`) will override any default configuration.
+
+**Example**
+
+Let's assume defaults for your login client were configured like the following:
+```javascript
+const defaults = {
+  client_id: '1234567890',
+  flow: 'standard',
+  flow_version: '1234567890',
+  locale: 'en-US',
+  redirect_uri: 'https://domain.com',
+}
+```
+
+If for some reason you wanted to change the redirect uri you could do this:
+
+```javascript
+async function register(firstName, lastName, email, password, redirectUri) {
+  const attrs = {
+    firstName,
+    lastName,
+    redirect_uri: redirectUri, // updates previously configured redirect uri
+  }
+
+  return await client.register(email, password, attrs);
+}
+```
+
 ## API
 
 The provided functions return Axios' default HTTP response. This allows for flexibility in handling errors
@@ -52,9 +81,9 @@ client.register(emailAddress, password, attrs = {})
 
 ### Login
 
-Get access token for existing entity
+Get access token for existing entity. Redirect URI must match previously provided value. If you're configuring it to a default value, you can ignore this.
 ```javascript
-client.login(emailAddress, password)
+client.login(emailAddress, password, redirectUri = "")
 ```
 
 ### Update Profile
