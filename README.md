@@ -93,6 +93,10 @@ Updates user profile associated with access token
 client.updateProfile(attrs, token)
 ```
 
+**Is something not working? See something that isn't yet supported?**
+
+Please open an issue in Github or submit a pull request :)
+
 **Example**
 
 This code sample is used to work around Janrain rate limiting.
