@@ -9,7 +9,7 @@
   "author": "Collen Byer",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.1"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,11 @@
     "janrain",
     "janrain client",
     "janrain login",
-    "login", 
+    "login",
     "janrain login client",
     "janrain sdk",
-    "janrain library", 
-    "capture", 
+    "janrain library",
+    "capture",
     "janrain capture"
   ]
 }
