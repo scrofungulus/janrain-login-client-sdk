@@ -101,6 +101,8 @@ Please open an issue in Github or submit a pull request :)
 
 This code sample is used to work around Janrain rate limiting.
 ```javascript
+const promiseRetry = require('promise-retry');
+
 const client = new Janrain(config, options);
 
 const register = (user) => {
